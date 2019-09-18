@@ -1,0 +1,99 @@
+<html lang="pt-br">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projeto IEC</title>
+<meta name="description" content ="Projeto final para disciplina de Introdução à Engenharia de Computação">
+<link rel="stylesheet" href="estilo/estilo.css">
+
+</head>
+
+<body>
+<header class="cabecalho">
+<a href="index.html"><h1 class="logo">Pie</h1></a>
+<button class="btn-menu"></button>
+<nav class="menu">
+<a class="btn-close">x</a>
+<ul>
+<li><a class="home" href="index.html">Home</a></li>
+<li><a class="disp" href="iot.html">Usar dispositivo</a></li>
+<li><a class="sobre" href="sobre.html">Sobre nós</a></li>
+<li><a class="app" href="https://drive.google.com/file/d/156CD63b_pj_hbRosXyJuyIuitcPg9V-C/view?usp=sharing" target="blank">Baixar App</a></li>
+</ul>
+</nav>
+</header>
+
+<div class="banner">
+<div class="title">
+<h2><img src="estilo/img/logo3.jpg" alt="Ferramentas usadas"></a></h2>
+</div>
+
+<!--Seções-->
+<main class="servicos">
+
+<article class="servico">
+<a href="https://arduino.cc"><img src="estilo/img/slider1.jpeg" alt="Ferramentas usadas"></a>
+<div class="inner">
+<a href="https://arduino.cc"> Arduino </a>
+<h4>Utilizamos a IDE do arduino para configurar a Wemos D1R2 e enviar e receber dados do firebase.</h4>
+</div>
+</article>
+
+<article class="servico">
+<a href="https://firebase.google.com"><img src="estilo/img/slider2.jpeg" alt="Ferramentas usadas"></a>
+<div class="inner">
+<a href="https://firebase.google.com"> Firebase </a>
+<h4>Utilizamos o firebase para hospedar os dados, modificando os valores conforme fosse necessário.</h4>
+</div>
+</article>
+
+<article class="servico">
+<a href="https://www.google.com/maps"><img src="estilo/img/slider6.jpg" alt="Ferramentas usadas"></a>
+<div class="inner">
+<a href="https://www.google.com/maps"> Google Maps </a>
+<div class="divmap"><h4>Utilizamos o Google Maps para exibir o local das coordenadas que adquirimos do firebase.</h4></div>
+</div>
+</article>
+
+<article class="servico">
+<a href="https://www.w3schools.com/"><img src="estilo/img/slider5.jpeg" alt="Ferramentas usadas"></a>
+<div class="inner">
+<a href="https://www.w3schools.com/"> Html, Css e Javascript </a>
+<h4>Utilizamos  Html, Css e Javascript para exibir os dados obtidos do servidor de maneira mais fácil.</h4>
+</div>
+</article>
+
+
+<article class="servico">
+<a href="https://becodaeletronica.com/home"><img src="estilo/img/slider3.jpeg" alt="Ferramentas usadas"></a>
+<div class="inner">
+<a href="https://becodaeletronica.com/home"> Equipamentos Principais </a>
+<h4>Utilizamos a Wemos D1R2 para comunicação com o servidor e o GY-NEO6MV2 para obter localização em tempo real.</h4>
+</div>
+</article>
+
+
+<article class="servico">
+<a href="https://br.000webhost.com/"><img src="estilo/img/slider7.jpeg" alt="Ferramentas usadas"></a>
+<div class="inner">
+<a href="https://br.000webhost.com/"> 000Webhost </a>
+<h4>Optamos por utilizar o 000Webhost para hospedar nosso site online, mostrando os dados que a Wemos D1R2 coleta.</h4>
+</div>
+</article>
+
+</main>
+
+<!--Inclusão JQUERY-->
+<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+ <script>
+  $(".btn-menu").click(function() {
+   $(".menu").show();
+  });
+  $(".btn-close").click(function() {
+   $(".menu").hide();
+  });
+ </script>
+ 
+</body>
+</html>

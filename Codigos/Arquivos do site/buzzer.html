@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Buzzer</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="estilo/estiloBotao.css"/>
+  </head>
+  <body> 
+   <h1 class="Texto"></h1>
+   <h1 class="Texto2"></h1>
+    <button type="submit" class="Buzzer"></button>
+
+   
+	
+	
+	<script>
+	// Initialize Firebase
+//The project has been deleted in firebase
+//fill in your own config info 
+var config = {
+	apiKey: "AIzaSyA74KM6-yMU6tZoEEB91qaidc0ouMEx2qk",
+    authDomain: "projetopie.firebaseapp.com",
+    databaseURL: "https://projetopie.firebaseio.com",
+    projectId: "projetopie",
+    storageBucket: "",
+    messagingSenderId: "779570970186",
+    appId: "1:779570970186:web:302b6124b8a736bc"
+};
+firebase.initializeApp(config);
+
+
+$(document).ready(function(){
+  var database = firebase.database();
+  var Buzzer;
+
+  database.ref().on("value", function(snap){
+    Buzzer = snap.val().Buzzer;
+    if(Buzzer == 1){
+        $(".Texto").text("Botão ativado");
+        $(".Texto2").text("");
+
+    } else {
+      $(".Texto").text("");
+      $(".Texto2").text("Botão desativado");
+    }
+  });
+
+  $(".Buzzer").click(function(){
+    var firebaseRef = firebase.database().ref().child("Buzzer");
+
+    if(Buzzer == 1){
+      firebaseRef.set(0);
+      Buzzer = 0;
+    } else {
+      firebaseRef.set(1);
+      Buzzer = 1;
+    }
+  });
+});
+
+	
+	</script>
+	
+	
+	
+  </body>
+</html>

@@ -1,0 +1,134 @@
+*{margin: 0; padding: 0; font-size: 100%; border: none; font-weight: 300; box-sizing: border-box;}
+body{background-color:#880E4F; padding-top: 10px; padding-bottom: 10px; font-family: sans-serif;}
+a{text-decoration: none;}
+ul{list-style: none;}
+img{max-width: 100%;}
+
+/*Cabeçalho*/
+.cabecalho{width: 100%; float:left; padding: %3 %4; background-color:#880E4F;}  
+.logo {margin-bottom: 10px; margin-left: 15px; width: 80px; height: 60px; float: left; background: url(img/logo2.png) center center/70px no-repeat; font-size: 0;}
+.btn-menu{margin-right: 15px; margin-top: 20px; width: 35px; height: 35px; float: right; text-align: center; color: #ffffff; border-radius:2px; cursor: pointer; 
+ background: url(img/botao.png) center center/32px no-repeat;}
+
+/*Menu*/
+
+.menu {display: none; width: 100%; height: 100%; position: fixed; background-color: rgba(0, 0, 0, 0.9); top: 0; Left: 0;}
+.btn-close {font-size: 3em; color: #ffffff; float: right; cursor: pointer; margin-right: 5%;}
+.menu ul{width: 100%; float: left; text-align: center;}
+.menu li {padding: 1.2%;}
+.menu li a {font-size: 2em; color: #ffffff; padding: 1.5% 3%;}
+.menu li a:hover {border: 1px solid #da6709;}
+
+/*Banner*/
+
+.banner {width: 100%; float: left; text-align: center; padding: 3% 4%; background:#ffffff;}
+.title {widht: 100%;}
+.title h2 {font-size: 2.5em; color: #f6c14d; font-weight: 700;}
+.title .N {font-size: 2.5em; color: #000000; font-weight: 700;}
+.title h3 {font-size: 1.5em; color: #f6c14d;}
+
+.buttons{margin-top: 3%; width: 100%;}
+.btn-cadastrar {margin-top: 3%; width: 100%; font-size: 1.5em; text-align: left; cursor: pointer; padding: 5%; border-radius: 10px;
+background-color: #fff; color: #130400;}
+.btn-sobre{margin-top: 3%; width: 100%; font-size: 1.5em; text-align: left; cursor: pointer; padding: 5%; border-radius: 10px;
+background-color: #130400; color: #fff;}
+
+/*Rodapé*/
+
+.rodape {margin-left: -10%; width: 114.3%; float: left; padding: 3% 40%; text-align: center; background: #880E4F; color: #ffffff; opacity: 0;}
+
+
+/*Serviços*/
+
+.servicos{ width: 100%; padding-left: 8%; }
+.servico { height: 500px; color: #643f18; width: 100%;  background: #FBE9E7; text-align: left; margin-bottom: 3%; border-radius: 104px 104px 104px 104px; }/*.servico:nth-child(6){ border-radius: 104px 50px  50px 104px; }.servico:nth-child(6) img{ border-radius: 104px 50px  00px 0px; }.servico:nth-child(1){ border-radius: 50px 104px  104px 50px; }.servico:nth-child(1) img{ border-radius: 50px 104px  00px 0px; }*/
+.servico:nth-child(1){margin-top: 3%;}
+.servico img{ border-radius: 104px 104px 0 0; }
+.inner {padding: 7%; }
+.inner a {font-size: 1.8em; color: #130400; font-weight: 700;}
+.inner h4 {font-size: 1.1em; color: #643f18; margin-top: 2%;}
+.inner p {margin-top: 6%; color: #130400; line-height: 1.0em;}
+
+/*===================MOBILE==========================*/
+
+@media screen and (min-width: 0px){ 
+.title img{width: 80%;}
+.servicos{ width: 100%; padding-right: 8%;}
+.servico{height: 440px;}
+.banner { height: 3000px;}
+}
+
+@media screen and (min-width: 500px){ 
+.title img{width: 80%;}
+.servicos{ width: 100%; padding-right: 8%; height: 500px;}
+.inner a {font-size: 1.5em; color: #130400; }
+.inner h4 { font-size: 1.2em; color: #643f18; margin-top: 2%;}
+}
+
+@media screen and (min-width: 580px){ 
+.title img{width: 80%;}
+.servicos{ width: 100%; padding-right: 8%; height: 500px;}
+.btn {font-size:20em;}
+.logo {margin-bottom: 10px; margin-left: 15px; width: 156px; height: 70px; float: left; background: url(img/logo.png) center center/156px no-repeat; font-size: 0;}
+.btn-menu{margin-right: 15px; margin-top: 10px; width: 56px; height: 56px; float: right; text-align: center; color: #ffffff; border-radius:156px; cursor: pointer; 
+ background: url(img/botao.png) center center/40px no-repeat;}
+.inner a {font-size: 1.5em; color: #130400; }
+.inner h4 { font-size: 1.2em; color: #643f18; margin-top: 2%;}
+}
+
+@media screen and (min-width: 700px){  
+.servico{height: 580px;}
+.inner a {font-size: 1.5em; font-weight: 700;}
+.inner h4 {font-size: 1.2em; }
+.servico:nth-child(2){margin-top: 3%;}}
+
+@media screen and (min-width: 768px){  
+.servicos{ width: 100%; padding-right: 8%;}
+.servico {width: 49%; float: left; margin-right: 2%; height: 400px;}
+.servico:nth-child(2){margin-right: 0;}
+.servico:nth-child(4){margin-right: 0%;}
+.servico:nth-child(5){margin-right: 0;}
+.servico:nth-child(6){margin-right: 0%; margin-left: 2%;}
+
+.inner a {font-size: 1.8em; font-weight: 700;}
+.inner h4 {font-size: 1.3em; }
+.servico:nth-child(2){margin-top: 3%;}
+}
+
+@media screen and (min-width: 960px){ 
+.title img{width: 40%;}
+.banner { height: 1200px;}
+
+.servicos{ width: 100%; padding-left: 16%;}
+.servico {width: 28%; float: left; margin-right: 2%; height: 350px;}
+.servico:nth-child(2){margin-right: 0;}
+.servico:nth-child(4){margin-right: 0%;}
+.servico:nth-child(5){margin-left: 2%; margin-right: 0%;}
+.servico:nth-child(6){margin-left: 2%; margin-right: 0%;}
+.inner a {font-size: 1.2em; font-weight: 700;}
+.inner h4 {font-size: 1.1em; }
+.servico:nth-child(2){margin-top: 3%; margin-right: 2%;}
+.servico:nth-child(3){margin-top: 3%; margin-right: 0%; }
+.inner .divmap {padding: 1%; }
+.servico:nth-child(4){margin-right: 0%;}
+.rodape{opacity: 1;}
+}
+
+@media screen and (min-width: 1280px){ 
+.btn-menu {display: none;}
+.btn-close {display: none;}
+.menu {width: auto; height: 56px; line-height: 56px; float: right; background-color: #880E4F;
+display: block !important; position: static; margin-right: 3%; }
+.menu li {margin-top: 7px; padding: 0; float: left;}
+.menu li a {font-weight: 700;  font-size: 1.3em; padding: 15px;}
+.menu li .home{color: #ffffff;}
+.menu li .disp{color: #ffffff;}
+.menu li .sobre{color: #da6709;}
+.menu li a:hover{border: none; color: #f6c14d;}
+}
+
+
+
+
+
+

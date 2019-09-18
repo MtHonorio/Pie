@@ -1,0 +1,308 @@
+*{margin: 0; padding: 0; font-size: 100%; border: none; font-weight: 300; box-sizing: border-box;}
+head{background-color:#880E4F; padding-top: 10px; padding-bottom: 10px; font-family: sans-serif; padding-right: 100px;}
+body{font-family: sans-serif; }
+a{text-decoration: none;}
+ul{list-style: none;}
+img{max-width: 100%;}
+
+/*Cabeçalho*/
+.cabecalho{width: 100%; float:left; padding: %3 %4; background-color:#880E4F;}  
+.logo {margin-bottom: 10px; margin-left: 15px; width: 80px; height: 60px; float: left; background: url(img/logo2.png) center center/70px no-repeat; font-size: 0;}
+.btn-menu{margin-right: 15px; margin-top: 20px; width: 35px; height: 35px; float: right; text-align: center; color: #ffffff; border-radius:2px; cursor: pointer; 
+ background: url(img/botao.png) center center/32px no-repeat;}
+
+/*Menu*/
+
+.menu {display: none; width: 100%; height: 100%; position: fixed; background-color: rgba(0, 0, 0, 0.9); top: 0; Left: 0;}
+.btn-close {font-size: 3em; color: #ffffff; float: right; cursor: pointer; margin-right: 5%;}
+.menu ul{width: 100%; float: left; text-align: center;}
+.menu li {padding: 1.2%;}
+.menu li a {font-size: 2em; color: #ffffff; padding: 1.5% 3%;}
+.menu li a:hover {border: 1px solid #da6709;}
+
+/*Banner*/
+
+.banner {width: 100%; float: left; text-align: center; padding: 3% 10%; background:#ffffff;}
+.title {width: 100%;}
+.title h2 {font-size: 2.5em; color: #f6c14d; font-weight: 700;}
+.title .N {font-size: 2.5em; color: #000000; font-weight: 700;}
+.title h3 {font-size: 1.5em; color: #f6c14d;}
+
+.buttons{margin-top: 3%; width: 100%;}
+.btn-cadastrar {margin-top: 3%; width: 100%; font-size: 1.5em; text-align: left; cursor: pointer; padding: 5%; border-radius: 10px;
+background-color: #fff; color: #130400;}
+.btn-sobre{margin-top: 3%; width: 100%; font-size: 1.5em; text-align: left; cursor: pointer; padding: 5%; border-radius: 10px;
+background-color: #130400; color: #fff;}
+
+
+/*Serviços*/
+
+.servicos{ width: 80%; }
+.servico { height: 500px; color: #643f18; width: 100%;  background: #ffffff; text-align: left; margin-bottom: 3%; border-radius: 54px 54px 54px 54px; }
+.servico:nth-child(1){margin-top: 3%;}
+.servico img{ border-radius: 54px 54px 0 0; }
+.inner {padding: 7%; }
+.inner a {font-size: 1.8em; color: #130400; font-weight: 700;}
+.inner h4 {font-size: 1.1em; color: #643f18; margin-top: 2%;}
+.inner p {margin-top: 6%; color: #130400; line-height: 1.0em;}
+
+/*===================MOBILE==========================*/
+
+@media screen and (min-width: 0px){ 
+.title img{width: 80%;}
+.servicos{width: 100%;}
+.servico{height: 440px;}
+.banner { height: 1200px; padding-left: 7.0%;}
+.servico:nth-child(1){padding-left: 0; margin-top: 7%;}
+.servico:nth-child(2){padding-left: 0px; margin-top: 3%; }
+}
+
+@media screen and (min-width: 500px){ 
+.banner { height: 1200px; padding-left: 0%;}
+.title img{width: 80%;}
+.servicos{ width: 100%; height: 500px;}
+.inner a {font-size: 1.5em; color: #130400; }
+.inner h4 { font-size: 1.2em; color: #643f18; margin-top: 2%;}
+.servico:nth-child(1){padding-left: 20%;}
+.servico:nth-child(2){padding-left: 20%; margin-top: 3%; padding-right: 20%;}
+}
+
+@media screen and (min-width: 580px){ 
+.title img{width: 80%;}
+.servicos{ width: 100%; height: 500px;}
+.btn {font-size:20em;}
+.logo {margin-bottom: 10px; margin-left: 15px; width: 156px; height: 70px; float: left; background: url(img/logo.png) center center/156px no-repeat; font-size: 0;}
+.btn-menu{margin-right: 15px; margin-top: 10px; width: 56px; height: 56px; float: right; text-align: center; color: #ffffff; border-radius:156px; cursor: pointer; 
+ background: url(img/botao.png) center center/40px no-repeat;}
+.inner a {font-size: 1.5em; color: #130400; }
+.inner h4 { font-size: 1.2em; color: #643f18; margin-top: 2%;}
+.servico:nth-child(1){padding-left: 20%; }
+.servico:nth-child(2){padding-left: 50%; margin-top: 3%; padding-right: 27%;}
+}
+
+@media screen and (min-width: 700px){  
+.servico{height: 580px;}
+.inner a {font-size: 1.5em; font-weight: 700;}
+.inner h4 {font-size: 1.2em; }
+.servico:nth-child(2){margin-top: 3%;}
+.servico:nth-child(1){padding-left: 30%;}
+.servico:nth-child(2){padding-left: 30%; margin-top: 3%; padding-right:21%; }
+.banner{height: 1500px;}
+}
+
+@media screen and (min-width: 768px){  
+.servico {width: 49%; float: left;  height: 400px;}
+.servico:nth-child(1){padding-left: 40%;}
+.servico:nth-child(2){padding-left: 40%; padding-right: 40%; margin-top: 3%; }
+}
+
+@media screen and (min-width: 960px){ 
+.title img{width: 40%; margin-left: 5%;}
+.banner { height: 1200px;}
+
+.servicos{ width: 80%; padding-left: 16%;}
+.servico {width: 40%; float: left; height: 350px;}
+.servico:nth-child(1){padding-left: 5%; margin-top: 3%;}
+.servico:nth-child(2){padding-left: 25%;  padding-right: 35%; margin-top: 3%; }
+
+}
+
+@media screen and (min-width: 1280px){ 
+.title img{width: 50%; margin-left: 15%;}
+.btn-menu {display: none;}
+.btn-close {display: none;}
+.menu {width: auto; height: 56px; line-height: 56px; float: right; background-color: #880E4F;
+display: block !important; position: static; margin-right: 3%; }
+.menu li {margin-top: 7px; padding: 0; float: left;}
+.menu li a {font-weight: 700;  font-size: 1.3em; padding: 15px;}
+.menu li .home{color: #ffffff;}
+.menu li .disp{color: #da6709;}
+.menu li .sobre{color: #ffffff;}
+.menu li a:hover{border: none; color: #f6c14d;}
+.servico:nth-child(1){padding-left: 15%;  margin-top: 3%;}
+.servico:nth-child(2){padding-left: 25%; padding-right: 25%; margin-top: 3%; }
+}
+
+/*Containers de Transladação*/
+.container
+{
+	
+	margin: 0;
+	padding: 0;
+	justify-content: center;
+	align-items: center;
+	font-family: consolas;
+	width: 80%;
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+}
+
+.container .card .face
+{
+	
+	width: 310px;
+	height: 200px;
+	transition: 0.5s;
+}
+
+.container .card .face.face1
+{
+	position: relative;
+	background:#f8cb5a;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+	transform: translateY(100px);
+}
+
+.container .card:hover .face.face1
+{
+	background:  #eb6374;
+	transform: translateY(-100px);
+}
+
+.container .card .face.face1 .content .imgloc1
+{
+	margin-left: 50px;
+	opacity: 0.6;
+	transition: 0.5;
+}
+
+
+.container .card .face.face1 .content .imgloc2
+{
+	margin-left: 75px;
+	opacity: 0.6;
+	transition: 0.5;
+}
+
+.container .card:hover .face.face1 .content
+{
+	
+	opacity: 1;
+	transition: 0.5;
+}
+
+.container .card:hover .face.face1 .content img
+{
+	
+	max-width: 100px;
+}
+
+
+.container .card:hover .face.face1 .content .imgloc1
+{
+	margin-left: 20px;
+}
+
+.container .card:hover .face.face1 .content .imgloc2
+{
+	margin-left: 25px;
+}
+
+
+.container .card.face.face1 .content .imgloc
+{
+	margin-left: 220px;
+}
+
+
+.container .card .face.face1 .content h3
+{
+	opacity: 0;
+	margin-top: 10px;
+}
+
+.container .card:hover .face.face1 .content h3
+{
+	opacity: 1;
+	margin: 10px 0 0;
+	padding: 0;
+	color: #fff;
+	text-align: center;
+	font-size: 1.5em;
+}
+
+.container .card .face.face2
+{
+	position: relative;
+	background:  #f8cb5a;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+	box-sizing: border-box;
+	box-shadow: 0 20px 50px rgba (0, 0, 0, 0.8);
+	transform: translateY(-100px);
+}
+
+.container .card:hover .face.face2
+{
+	background: #fff;
+	
+}
+
+.container .card:hover .face.face2 p
+{
+	
+	transform: translateY(0px);
+}
+
+
+.container .card .face.face2 p
+{
+	margin: 0;
+	padding: 0;
+}
+
+.container .card .face.face2 .content a{
+	margin: 15px 0 0;
+	display: inline-block;
+	justify-content: center;
+	text-decoration:none;
+	font-weight:900;
+	color: #333;
+	padding: 5px;
+	border: 1px solid #333;
+}
+
+.container .card .face.face2 .content .Buzzer{
+	margin: 15px 0 0;
+	display: inline-block;
+	justify-content: center;
+	text-decoration:none;
+	font-weight:900;
+	color: #333;
+	padding: 5px;
+	border: 1px solid #333;
+}
+
+.container .card .face.face2 a:hover{
+	background: #eb6374;
+	color: #ffff;
+	border: 1px solid #eb6374
+}
+
+.container .card .face.face2 .Buzzer:hover{
+	background: #eb6374;
+	color: #ffff;
+	border: 1px solid #eb6374
+}
+
+.Texto{
+  color: green;
+  font-family: Verdana;
+
+}
+
+.Texto2{
+    
+    color: red;
+    font-family: Verdana;
+}
+
+
+
+

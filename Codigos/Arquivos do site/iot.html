@@ -1,0 +1,172 @@
+<html lang="pt-br">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projeto IEC</title>
+<meta name="description" content ="Projeto final para disciplina de Introdução à Engenharia de Computação">
+<link rel="stylesheet" href="estilo/estiloIot.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+<script src="script.js"></script>
+</head>
+
+<body>
+
+<header class="cabecalho">
+<a href="index.html"><h1 class="logo">Pie</h1></a>
+<button class="btn-menu"></button>
+<nav class="menu">
+<a class="btn-close">x</a>
+<ul>
+<li><a class="home" href="index.html">Home</a></li>
+<li><a class="disp" href="iot.html">Usar dispositivo</a></li>
+<li><a class="sobre" href="sobre.html">Sobre nós</a></li>
+<li><a class="app" href="https://drive.google.com/file/d/156CD63b_pj_hbRosXyJuyIuitcPg9V-C/view?usp=sharing" target="blank">Baixar App</a></li>
+</ul>
+</nav>
+</header>
+
+<div class="banner">
+<div class="title">
+<h2><img src="estilo/img/texto2.jpg" alt="Ferramentas usadas"></a></h2><br><br><br><br>
+</div>
+
+<!--Seções-->
+<main class="servicos">
+
+<article class="servico">
+<div class="container">
+<div class="card">
+<div class="face face1">
+<div class="content">								
+<div class="imgloc1">	
+<img src="estilo/img/som2.png" width="80%">
+</div>
+<h3>Emitir som</h3>
+</div>
+</div>
+<div class="face face2">
+<div class="content">
+<h1 class="Texto">Sem conexão</h1>
+<h1 class="Texto2">Sem conexão</h1>
+<a type="submit" class="Buzzer">Clique para alterar </a>
+<br>
+</div>
+</div>
+</div>
+</article>
+
+<article class="servico">
+<div class="container">
+<div class="card">
+<div class="face face1">
+<div class="content">								
+<div class="imgloc2">	
+<img src="estilo/img/mapa2.png" width="70%">
+</div>
+<h3>Localização</h3>
+</div>
+</div>
+<div class="face face2">
+<div class="content">
+<p>Localização em tempo real:</p><br>
+<h2 type="text" id="LerDadosLatitude">Sem conexão</h2>
+<h2 type="text" name="" id="LerDadosLongitude">Sem conexão</h2>
+
+</div>
+</div>
+</div>
+</article>
+
+
+
+
+
+
+</main>
+
+<!--Inclusão JQUERY-->
+<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+ <script>
+  $(".btn-menu").click(function() {
+   $(".menu").show();
+   $(".container").hide();
+   
+  });
+  $(".btn-close").click(function() {
+   $(".menu").hide();
+   $(".container").show();
+  });
+ </script>
+ 
+ <script>
+	// Initialize Firebase
+//The project has been deleted in firebase
+//fill in your own config info 
+var config = {
+	apiKey: "AIzaSyA74KM6-yMU6tZoEEB91qaidc0ouMEx2qk",
+    authDomain: "projetopie.firebaseapp.com",
+    databaseURL: "https://projetopie.firebaseio.com",
+    projectId: "projetopie",
+    storageBucket: "",
+    messagingSenderId: "779570970186",
+    appId: "1:779570970186:web:302b6124b8a736bc"
+};
+firebase.initializeApp(config);
+ let db = firebase.database();
+
+
+$(document).ready(function(){
+  var database = firebase.database();
+  var Buzzer;
+
+  database.ref().on("value", function(snap){
+    Buzzer = snap.val().Buzzer;
+    if(Buzzer == 1){
+        $(".Texto").text("O dispositivo está ativado");
+        $(".Texto2").text("");
+
+    } else {
+      $(".Texto").text("");
+      $(".Texto2").text("O dispositivo está desativado");
+    }
+  });
+
+  $(".Buzzer").click(function(){
+    var firebaseRef = firebase.database().ref().child("Buzzer");
+
+    if(Buzzer == 1){
+      firebaseRef.set(0);
+      Buzzer = 0;
+    } else {
+      firebaseRef.set(1);
+      Buzzer = 1;
+    }
+  });
+});
+
+   	db.ref("Coordenadas/Latitude").on("value", function(snapshot) {									
+                console.log(snapshot.val());
+                var LerDadosLat  = document.getElementById('Coordenadas/Latitude');
+                LerDadosLatitude.innerHTML = 'Latitude: ' + snapshot.val();				
+            }, function (errorObject) {
+                console.log("The read failed: " + errorObject.code);			
+        }						
+		);
+			
+        
+
+        db.ref("Coordenadas/Longitude").on("value", function(snapshot) {
+                console.log(snapshot.val());
+                 LerDadosLong = document.getElementById('Coordenadas/Longitude');				 
+                 LerDadosLongitude.innerHTML =  'Longitude: ' + snapshot.val();			                
+            }, function (errorObject) {
+                console.log("The read failed: " + errorObject.code);
+        });	
+
+	
+	</script>
+	
+</body>
+</html>

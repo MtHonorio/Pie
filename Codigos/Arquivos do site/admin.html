@@ -1,0 +1,114 @@
+
+    
+<!DOCTYPE html>
+<html>
+<head>
+<title>admin</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{
+background: #000000;
+color: white;
+}
+.botao{
+background: black;
+color:white;
+border: 1px solid #ffffff;
+}
+.botao:hover{
+background: white;
+color:black;
+width: 750px;
+height: 500px;
+}
+
+</style>
+</head>
+<body>
+	
+	<div id="botoes">
+	<h2 type="text" id="LerDadosLatitude"></h2>
+	<h2 type="text" name="" id="LerDadosLongitude"></h2>
+	
+	
+		
+	<input type="text" name="" id="EnviarLatitude" placeholder="Nova Latitude">
+	<input type="text" name="" id="EnviarLongitude" placeholder="Nova Longitude">
+	<br><br>	
+	<a class="botao" onclick="enviaDados()">Enviar</a>
+	</div>
+	
+</body>
+
+
+<script>
+	
+	function enviaDados(){//Envia os dados digitados pelo usuário para o banco de dados do firebase
+		console.log("Enviando dados...");
+		var a = document.getElementById("EnviarLatitude");
+		var b = document.getElementById("EnviarLongitude");
+		
+		firebase.database().ref('Coordenadas').set({//Alterando os valores no banco de dados
+			Latitude:a.value,//A informação recebe o valor da caixa de texto
+			Longitude:b.value//A informação recebe o valor da caixa de texto		
+		});	
+	}
+	
+</script>
+
+
+
+<script src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.10.1/firebase-database.js"></script>
+<script>
+  // Initialize Firebase
+  //*************************************************************************************************************************
+		  var config = {
+			apiKey: "AIzaSyA74KM6-yMU6tZoEEB91qaidc0ouMEx2qk",
+			authDomain: "projetopie.firebaseapp.com",
+			databaseURL: "https://projetopie.firebaseio.com",
+			projectId: "projetopie",
+			storageBucket: "",
+			messagingSenderId: "779570970186",
+			appId: "1:779570970186:web:302b6124b8a736bc"
+		  };
+		  firebase.initializeApp(config);
+		  let db = firebase.database();
+  //**************************************************************************************************************************  
+
+		
+		   	db.ref("Coordenadas/Latitude").on("value", function(snapshot) {									
+                console.log(snapshot.val());
+                var LerDadosLat  = document.getElementById('Coordenadas/Latitude');
+                LerDadosLatitude.innerHTML = 'Latitude: ' + snapshot.val();				
+            }, function (errorObject) {
+                console.log("The read failed: " + errorObject.code);			
+        }						
+		);
+			
+        
+
+        db.ref("Coordenadas/Longitude").on("value", function(snapshot) {
+
+                console.log(snapshot.val());
+
+                 LerDadosLong = document.getElementById('Coordenadas/Longitude');
+				 
+                 LerDadosLongitude.innerHTML =  'Longitude: ' + snapshot.val();
+				 
+                
+
+            }, function (errorObject) {
+
+                console.log("The read failed: " + errorObject.code);
+
+        });	
+		
+		
+		
+		
+</script>
+
+</html>
+
+
