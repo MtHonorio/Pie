@@ -6,8 +6,8 @@
 #define WIFI_SSID "***********" //Nome da rede
 #define WIFI_PASSWORD "*************" //Senha da rede
 
-#define FIREBASE_AUTH "Xbe3qyqVaQcW4rdfMVZKld0hrB9od58m9NiLs9MS" //Token
-#define FIREBASE_HOST "projetopie.firebaseio.com"
+#define FIREBASE_AUTH "*********************" //Token
+#define FIREBASE_HOST "***********************"
 
 int AtivarBuzzer = 0;//Equivale a D3 na wemos
 
