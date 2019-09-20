@@ -3,11 +3,11 @@
 #include <ESP8266WiFi.h>
 #include <FirebaseArduino.h>
 
-#define WIFI_SSID "Nogueira"
-#define WIFI_PASSWORD "123321123"
+#define WIFI_SSID "**********"
+#define WIFI_PASSWORD "*************"
 
-#define FIREBASE_AUTH "Xbe3qyqVaQcW4rdfMVZKld0hrB9od58m9NiLs9MS"
-#define FIREBASE_HOST "projetopie.firebaseio.com"
+#define FIREBASE_AUTH "*************"
+#define FIREBASE_HOST "**************"
 
 const int AtivarBuzzer = 14;// Equivale a D5 na wemos
 const int botao = 0; //Equivale a D0 na wemos
