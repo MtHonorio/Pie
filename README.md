@@ -97,7 +97,7 @@ TinyGPS gps1;
   } 
 ```
 ## Código da Wemos que recebe
-![](https://github.com/dlrds/Pie/blob/master/Imagens/Circuito.png)
+
 
 ```c
 #include <SoftwareSerial.h>
