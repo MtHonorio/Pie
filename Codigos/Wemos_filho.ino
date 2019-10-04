@@ -10,7 +10,7 @@
 #define FIREBASE_HOST "**************"
 
 const int AtivarBuzzer = 14;// Equivale a D5 na wemos
-const int botao = 0; //Equivale a D0 na wemos
+const int botao = 0; //Equivale a D3 na wemos
 int estado = 0;
 
 void setup() {
