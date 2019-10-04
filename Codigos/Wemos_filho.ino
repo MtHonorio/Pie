@@ -36,7 +36,7 @@ void setup() {
 }
 
 void loop() {
-    bool recebido = false;  
+      
     estado = Firebase.getInt("Buzzer");
     
     if (digitalRead(botao) == 0)
