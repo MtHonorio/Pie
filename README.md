@@ -159,5 +159,5 @@ void loop() {
    
 ```
 
-## Circuitos
+## Circuito
 ![](https://github.com/dlrds/Pie/blob/master/Imagens/Circuito.png)
